@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Proyecto: nunca subir datos ni claves
+datos/
+*.zip
+clave_firms.txt
+.env
