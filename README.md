@@ -31,9 +31,10 @@
 7. [Uso previsto](#7-uso-previsto)
 8. [Trabajo futuro](#8-trabajo-futuro)
 9. [Reproducibilidad](#9-reproducibilidad)
-10. [Uso de inteligencia artificial](#10-uso-de-inteligencia-artificial)
-11. [Referencias](#11-referencias)
-12. [Créditos y licencia](#12-créditos-y-licencia)
+10. [Cronología](#10-cronología)
+11. [Uso de inteligencia artificial](#11-uso-de-inteligencia-artificial)
+12. [Referencias](#12-referencias)
+13. [Créditos y licencia](#13-créditos-y-licencia)
 
 ---
 
@@ -159,14 +160,27 @@ con actores del sector; no constituye un requerimiento confirmado.*
 3. Entorno: Python 3.13 con pandas, pyarrow, plotly y streamlit.
 4. Instrucciones de ejecución: *se completan con el código durante el evento.*
 
-## 10. Uso de inteligencia artificial
+## 10. Cronología
+
+Para que quede claro qué se hizo antes del evento y qué durante:
+
+| Etapa | Fechas | Qué incluye |
+|---|---|---|
+| **Preparación** | hasta el 13/11/2026 | Elección del desafío, plan de trabajo, descarga de datos de FIRMS, exploración preliminar (sección 2) y documentación. **Sin código de la solución.** |
+| **Desarrollo** | 14 y 15/11/2026 | Procesamiento, calibración, validación, calendario, aplicación web y presentación. |
+
+Marcas en el repositorio: la etiqueta [`pre-evento`](../../tree/pre-evento) señala el estado al cierre
+de la preparación; todo commit posterior corresponde al desarrollo durante el evento. La entrega se
+marcará con la etiqueta `entrega-final`.
+
+## 11. Uso de inteligencia artificial
 
 Durante la preparación se utilizó un asistente de IA (Claude, de Anthropic) para organizar el plan de
 trabajo, redactar la documentación y realizar la exploración preliminar de los datos. Las decisiones
 de alcance, la descarga de datos y la revisión del contenido corresponden al autor. La declaración
 completa, incluido el uso durante el evento, se publica al cierre de la entrega.
 
-## 11. Referencias
+## 12. Referencias
 
 1. NASA FIRMS — Archive Download. <https://firms.modaps.eosdis.nasa.gov/download/>
 2. NASA VIIRS Land — Active Fire Product (VNP14 / VNP14IMG).
@@ -180,7 +194,7 @@ completa, incluido el uso durante el evento, se publica al cierre de la entrega.
 
 Los datos de FIRMS se citan según el `Readme.txt` incluido en cada descarga.
 
-## 12. Créditos y licencia
+## 13. Créditos y licencia
 
 **Autor:** Emanuel Pereyra.
 **Datos:** NASA FIRMS / LANCE (NASA ESDIS).
