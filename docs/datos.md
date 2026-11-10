@@ -11,7 +11,7 @@ NASA FIRMS, descarga de archivo: <https://firms.modaps.eosdis.nasa.gov/download/
 ## Parámetros de la descarga
 
 - **Área:** polígono personalizado sobre la provincia de Santa Fe (coordenadas más abajo).
-- **Período:** 2012-01-01 a 2026-10-01.
+- **Período:** 2012-01-01 a 2026-10-01 (NOAA-21: pedido hasta 2026-11-01; se recorta al mismo período).
 - **Formato:** CSV.
 
 | Fuente en FIRMS | Instrumento / satélite | Prefijo del archivo dentro del ZIP |
@@ -19,6 +19,7 @@ NASA FIRMS, descarga de archivo: <https://firms.modaps.eosdis.nasa.gov/download/
 | MODIS C6.1 | Terra y Aqua combinados (1 km) | `DL_FIRE_M-C61_<id>` |
 | J1 VIIRS C2 | NOAA-20 (375 m) | `DL_FIRE_J1V-C2_<id>` |
 | SUOMI VIIRS C2 | S-NPP (375 m) | `DL_FIRE_SV-C2_<id>` |
+| J2 VIIRS C2 | NOAA-21 (375 m) | `DL_FIRE_J2V-C2_<id>` |
 
 `<id>` es el identificador del pedido en la cuenta de quien descarga; cambia en cada pedido.
 
@@ -44,6 +45,7 @@ Descomprimir cada ZIP en su propia subcarpeta de `datos/` (ignorada por Git):
 datos/
   modis/
   viirs_noaa20/
+  viirs_noaa21/
   viirs_snpp/
 ```
 
@@ -64,8 +66,8 @@ Observaciones verificadas sobre los archivos descargados:
 
 - El archivo **NRT no incluye la columna `type`**; el estándar sí.
 - `acq_time` es texto `HHMM` en hora UTC; debe leerse como texto para conservar los ceros iniciales.
-- En VIIRS, `confidence` es una letra (`l`, `n`, `h`). En MODIS se espera un valor numérico de 0 a 100
-  *(pendiente de confirmar sobre el archivo de MODIS)*.
+- En VIIRS, `confidence` es una letra (`l`, `n`, `h`); en MODIS es un valor numérico de 0 a 100.
+- En MODIS, `satellite` indica `Terra` o `Aqua`; en VIIRS, `SNPP`, `N20` o `N21`.
 - El estándar tiene un retraso de unos 5 meses; los meses recientes provienen del archivo NRT.
 
 ## Advertencias de NASA (resumen)
